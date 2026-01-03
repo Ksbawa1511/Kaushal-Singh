@@ -13,7 +13,19 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://127.0.0.1:5173',
+  'http://localhost:3000',
+  'https://kaushal-singh-dh7e.vercel.app'
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    credentials: false
+  })
+);
 app.use(express.json());
 app.use(morgan('dev'));
 

@@ -8,7 +8,7 @@ import Projects from './components/Projects.jsx';
 import Skills from './components/Skills.jsx';
 import Trainings from './components/Trainings.jsx';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api';
 
 function App() {
   const [profile, setProfile] = useState(null);
