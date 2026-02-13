@@ -24,7 +24,13 @@ function Hero({ data }) {
 
       {data.image ? (
         <div className="hero-image">
-          <img src={data.image} alt={data.name || 'Profile'} />
+          <img
+            src={data.image}
+            alt={data.name || 'Profile'}
+            loading="lazy"
+            decoding="async"
+            sizes="(max-width: 768px) 220px, 260px"
+          />
         </div>
       ) : null}
     </section>

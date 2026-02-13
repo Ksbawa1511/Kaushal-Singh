@@ -49,41 +49,46 @@ const profile = {
   ],
   trainings: [
     {
-      title: 'Mastering Node.js, Express.js And MongoDB',
-      provider: 'Internshala Trainings (Virtual)',
-      period: 'Jul 2025 - Aug 2025',
-      description: 'Built REST APIs with Node/Express and practiced MongoDB fundamentals.'
-    },
-    {
-      title: 'BUILDING Modern Web Applications Using React',
-      provider: 'Internshala Trainings (Virtual)',
-      period: 'Jun 2025 - Jul 2025',
-      description: 'Developed modern React apps with component-driven design.'
+      title: 'Designing Web Pages Using HTML And CSS',
+      provider: 'Internshala Trainings',
+      period: 'Apr 2025 - May 2025',
+      description: 'Created responsive layouts and accessible UI components.',
+      certificateImage: '/assets/cert-html-css.png'
     },
     {
       title: 'Developing Interactive Websites With JavaScript',
-      provider: 'Internshala Trainings (Virtual)',
+      provider: 'Internshala Trainings',
       period: 'May 2025 - Jun 2025',
-      description: 'Focused on DOM manipulation, asynchronous JS, and UI interactions.'
+      description: 'Focused on DOM manipulation, asynchronous JS, and UI interactions.',
+      certificateImage: '/assets/cert-javascript.png'
     },
     {
-      title: 'Designing Web Pages Using HTML And CSS',
-      provider: 'Internshala Trainings (Virtual)',
-      period: 'Apr 2025 - May 2025',
-      description: 'Created responsive layouts and accessible UI components.'
+      title: 'BUILDING Modern Web Applications Using React',
+      provider: 'Internshala Trainings',
+      period: 'Jun 2025 - Jul 2025',
+      description: 'Developed modern React apps with component-driven design.',
+      certificateImage: '/assets/cert-react.png'
+    },
+    {
+      title: 'Mastering Node.js, Express.js And MongoDB',
+      provider: 'Internshala Trainings',
+      period: 'Jul 2025 - Aug 2025',
+      description: 'Built REST APIs with Node/Express and practiced MongoDB fundamentals.',
+      certificateImage: '/assets/cert-node.png'
     },
     {
       title: 'Git And GitHub: Mastering Version Control',
-      provider: 'Internshala Trainings (Virtual)',
+      provider: 'Internshala Trainings',
       period: 'May 2025',
-      description: 'Version control workflows with branching, PRs, and collaboration.'
+      description: 'Version control workflows with branching, PRs, and collaboration.',
+      certificateImage: '/assets/cert-git.png'
     },
     {
       title: 'Generative AI',
-      provider: 'Internshala Trainings (Virtual)',
+      provider: 'Internshala Trainings',
       period: 'Feb 2025 - Mar 2025',
       description:
-        'Completed 6-week program on Python fundamentals, AI integrations, and built an AI-powered Telegram bot (scored 84%).'
+        'Completed 6-week program on Python fundamentals, AI integrations, and built an AI-powered Telegram bot.'
     }
   ],
   projects: [
@@ -106,22 +111,34 @@ const profile = {
     {
       title: 'Weather Forecast Application',
       period: 'Jun 2025',
-      highlights: ['Real-time weather via async API requests with responsive UI.']
+      highlights: ['Real-time weather via async API requests with responsive UI.'],
+      link: 'https://weather-forecast-taupe-five.vercel.app/'
     },
     {
-      title: 'Personal Portfolio Website',
-      period: 'May 2025',
-      highlights: ['HTML/CSS portfolio showcasing skills, projects, and contact info.']
+      title: 'Student Registration System',
+      period: 'Jun 2025',
+      highlights: ['Add and list students with a simple, fast UI.'],
+      link: 'https://student-system-indol.vercel.app/'
+    },
+    {
+      title: 'Lord Shiva Devotional Page',
+      period: 'Jul 2025',
+      highlights: ['Single-page devotional site with responsive layout.'],
+      link: 'https://lord-shiva-omega.vercel.app/'
+    },
+    {
+      title: 'Tic Tac Toe Game',
+      period: 'Aug 2025',
+      highlights: ['Two-player and vs-computer modes with win detection and reset.'],
+      link: 'https://tic-tac-toe-ochre-one-86.vercel.app/'
     }
   ],
   socialLinks: [
-    { label: 'Email', url: 'mailto:ksbawa1511@gmail.com' },
-    { label: 'Call', url: 'tel:+919017958651' },
-    { label: 'YouTube', url: 'https://www.youtube.com/@mystic_vloger', icon: '/assets/yt.png' },
-    { label: 'Instagram', url: 'https://instagram.com/kaushal_singh_bawa_?igshid=MzMyNGUyNmU2YQ==', icon: '/assets/insta.jpeg' },
-    { label: 'Facebook', url: 'https://www.facebook.com/profile.php?id=100007309396619&mibextid=ZbWKwL', icon: '/assets/fb1.png' },
-    { label: 'Threads', url: 'https://www.threads.net/@kaushal_singh_bawa_', icon: '/assets/th.png' },
-    { label: 'Twitter', url: 'https://x.com/Kaushal_Singh15?s=20', icon: '/assets/x.png' },
+    {
+      label: 'LinkedIn',
+      url: 'https://www.linkedin.com/in/kaushal-singh-802998270',
+      icon: '/assets/linkedin.svg'
+    },
     { label: 'GitHub', url: 'https://github.com/ksbawa1511', icon: '/assets/github.svg' }
   ],
   footer: {

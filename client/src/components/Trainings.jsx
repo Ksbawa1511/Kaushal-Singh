@@ -1,23 +1,95 @@
+import { useEffect, useState } from 'react';
+
 function Trainings({ items = [] }) {
+  const [activeIndex, setActiveIndex] = useState(-1);
+
   if (!items.length) return null;
+
+  const activeItem = activeIndex >= 0 ? items[activeIndex] : null;
+
+  const openCard = (idx) => {
+    setActiveIndex(idx);
+  };
+
+  const closeCard = () => setActiveIndex(-1);
+
+  useEffect(() => {
+    if (activeItem) {
+      const handler = (e) => {
+        if (e.key === 'Escape') {
+          closeCard();
+        }
+      };
+      window.addEventListener('keydown', handler);
+      return () => window.removeEventListener('keydown', handler);
+    }
+  }, [activeItem]);
 
   return (
     <section className="education-section" id="trainings">
       <div className="container">
         <h2>Trainings & Certifications</h2>
         <div className="education-timeline">
-          {items.map((item) => (
+          {items.map((item, idx) => (
             <div className="education-item" key={`${item.title}-${item.period}`}>
-              <div className="education-content">
+              <button
+                className="education-content education-card-button"
+                onClick={() => openCard(idx)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    openCard(idx);
+                  }
+                }}
+                aria-expanded={activeIndex === idx}
+              >
                 <h3>{item.title}</h3>
                 <p className="institution">{item.provider}</p>
                 <p className="year">{item.period}</p>
                 {item.description ? <p className="meta">{item.description}</p> : null}
-              </div>
+                <span className="card-hint">View details & certificate</span>
+              </button>
             </div>
           ))}
         </div>
       </div>
+
+      {activeItem ? (
+        <div className="training-modal" role="dialog" aria-modal="true">
+          <div className="training-modal-content">
+            <div className="training-modal-header">
+              <div>
+                <h3>{activeItem.title}</h3>
+                <p className="institution">{activeItem.provider}</p>
+                <p className="year">{activeItem.period}</p>
+              </div>
+              <button className="modal-close" onClick={closeCard} aria-label="Close">
+                ×
+              </button>
+            </div>
+            {activeItem.description ? <p className="meta">{activeItem.description}</p> : null}
+            {activeItem.certificateImage ? (
+              <div className="certificate-wrapper">
+                <img
+                  className="training-certificate"
+                  src={activeItem.certificateImage}
+                  alt={`${activeItem.title} certificate`}
+                  loading="lazy"
+                />
+                <a
+                  className="certificate-link"
+                  href={activeItem.certificateImage}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open certificate in new tab
+                </a>
+              </div>
+            ) : null}
+          </div>
+          <div className="training-modal-backdrop" onClick={closeCard} />
+        </div>
+      ) : null}
     </section>
   );
 }
