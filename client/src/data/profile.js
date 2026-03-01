@@ -2,16 +2,16 @@ const profile = {
   hero: {
     name: 'Kaushal Singh',
     highlight: 'Kaushal Singh',
-    tagline: 'Frontend Developer',
-    typingText: 'HTML | CSS | JavaScript | React',
+    tagline: 'Full Stack Developer',
+    typingText: 'React | Node.js | MongoDB | MERN',
     description:
-      'Seeking an entry-level frontend developer role to build responsive, accessible UIs with modern JavaScript and React.',
+      'Seeking a full stack developer role to build end-to-end web applications with React, Node.js, and MongoDB.',
     image: '/assets/Gemini_Generated_Image_8zxxtn8zxxtn8zxx.png',
     resumeLink: '/assets/KaushalSingh_InternshalaResume.pdf'
   },
   about: {
     objective:
-      'Seeking an entry-level frontend developer position where I can use HTML, CSS, JavaScript, and React to build responsive, accessible interfaces while learning from experienced teams.',
+      'Seeking a full stack developer position where I can build and ship complete web applications—from UI with React to APIs and databases with Node.js and MongoDB—while learning from experienced teams.',
     contact: [
       { label: 'Email', value: 'ksbawa1511@gmail.com', href: 'mailto:ksbawa1511@gmail.com' },
       { label: 'Phone', value: '+91 9017958651', href: 'tel:+919017958651' },
@@ -24,11 +24,14 @@ const profile = {
       'CSS',
       'JavaScript',
       'React',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
       'Bootstrap',
       'Git & GitHub'
     ],
     soft: ['Teamwork', 'Time Management', 'Problem Solving'],
-    other: ['Responsive Design', 'Accessibility', 'REST API Integration']
+    other: ['REST APIs', 'JWT Authentication', 'MERN Stack']
   },
   education: [
     {
@@ -42,6 +45,22 @@ const profile = {
       institution: 'Baba Farid Group Of Institutions',
       year: '2019 - 2022',
       detail: 'Percentage: 76%'
+    }
+  ],
+  experience: [
+    {
+      title: 'Digital Marketing / Marketing Intern',
+      company: 'WeDidIT · MiddleMen',
+      period: 'Jan 2026 - Feb 2026',
+      duration: '1 month',
+      location: 'Mandi Dabwali, Haryana, India',
+      workMode: 'Remote',
+      type: 'Internship',
+      description: 'Supported digital marketing and content initiatives across both roles.',
+      highlights: [
+        'Wrote and published book reviews and shared them with the team for feedback and discussion.',
+        'Collaborated with others on review cycles to improve content quality and reach.'
+      ]
     }
   ],
   trainings: [
@@ -67,6 +86,13 @@ const profile = {
       certificateImage: '/assets/cert-react.png'
     },
     {
+      title: 'Mastering Node.js, Express.js And MongoDB',
+      provider: 'Internshala Trainings',
+      period: 'Jul 2025 - Aug 2025',
+      description: 'Built REST APIs with Node/Express and practiced MongoDB fundamentals.',
+      certificateImage: '/assets/cert-node.png'
+    },
+    {
       title: 'Git And GitHub: Mastering Version Control',
       provider: 'Internshala Trainings',
       period: 'May 2025',
@@ -83,6 +109,14 @@ const profile = {
   ],
   projects: [
     {
+      title: 'YouTube-inspired Platform (MERN)',
+      period: 'Aug 2025 - Nov 2025',
+      highlights: [
+        'Video uploads with JWT authentication.',
+        'Comments, likes, shares; responsive UI and REST API.'
+      ]
+    },
+    {
       title: 'ShoppyGlobe E-commerce',
       period: 'Jun 2025 - Jul 2025',
       highlights: [
@@ -93,13 +127,13 @@ const profile = {
     {
       title: 'Weather Forecast Application',
       period: 'Jun 2025',
-      highlights: ['Real-time weather data with responsive, accessible UI.'],
+      highlights: ['Real-time weather via API; responsive UI.'],
       link: 'https://weather-forecast-taupe-five.vercel.app/'
     },
     {
       title: 'Student Registration System',
       period: 'Jun 2025',
-      highlights: ['Clean form and list UI for student data.'],
+      highlights: ['Full-stack student CRUD with simple, fast UI.'],
       link: 'https://student-system-indol.vercel.app/'
     },
     {

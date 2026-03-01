@@ -1,5 +1,6 @@
 import About from './components/About.jsx';
 import Education from './components/Education.jsx';
+import Experience from './components/Experience.jsx';
 import Footer from './components/Footer.jsx';
 import Hero from './components/Hero.jsx';
 import Navbar from './components/Navbar.jsx';
@@ -20,6 +21,7 @@ function App() {
         <About data={profile.about} />
         <Skills data={profile.skills} />
         <Education items={profile.education} />
+        <Experience items={profile.experience} />
         <Trainings items={profile.trainings} />
         <Projects items={profile.projects} />
       </main>
